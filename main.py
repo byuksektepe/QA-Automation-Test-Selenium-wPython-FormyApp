@@ -23,9 +23,29 @@ class main:
 
 
     def sleep_and_quit():
-        time.sleep(3)
+        time.sleep(2)
         main.chrome_driver.quit()
+
+    def click_element(find_element_mode, item):
+        s = 1
+        if find_element_mode == "XPATH":
+            click_element = main.chrome_driver.find_element(By.XPATH, item)
+        elif find_element_mode == "ID":
+            click_element = main.chrome_driver.find_element(By.ID, item)
+        elif find_element_mode == "NAME":
+            click_element = main.chrome_driver.find_element(By.NAME, item)
+        elif find_element_mode == "CLASS_NAME":
+            click_element = main.chrome_driver.find_element(By.CLASS_NAME, item)
+        else:
+            raise Exception("in click_element function, find_element_mode does not math.")
+            s = 0
+
+        if s == 1:
+            click_element.click()
 
 
 main.Get_Formy_App()
+main.click_element(find_element_mode="XPATH", item="/html/body/div/div/li[9]/a")
+
+# Call This lAST!
 main.sleep_and_quit()
