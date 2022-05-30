@@ -11,17 +11,21 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 class main:
+    chrome_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    chrome_driver.get('https://formy-project.herokuapp.com/')
+
     def Get_Formy_App():
-        chrome_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        chrome_driver.get('https://formy-project.herokuapp.com/')
 
-        chrome_driver.maximize_window()
+        main.chrome_driver.maximize_window()
 
-        if not "Formy" in chrome_driver.title:
+        if not "Formy" in main.chrome_driver.title:
             raise Exception("Could not load page")
 
+
+    def sleep_and_quit():
         time.sleep(3)
-        chrome_driver.quit()
+        main.chrome_driver.quit()
 
 
 main.Get_Formy_App()
+main.sleep_and_quit()
