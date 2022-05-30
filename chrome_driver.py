@@ -7,4 +7,5 @@ class chrome_driver:
     def set(self):
         chrome_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         return chrome_driver
+    pass
 #end
