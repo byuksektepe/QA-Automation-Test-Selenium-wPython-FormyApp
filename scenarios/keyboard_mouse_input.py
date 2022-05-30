@@ -1,4 +1,11 @@
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support import expected_conditions as EC
+
+
+class keyboard_mouse_input_scenario:
+
+    def start(self, driver):
+        element_input = driver.find_element(By.ID, "name")
+        element_input.click()
+        element_input.send_keys("Berkant")
+        element_button = driver.find_element(By.ID, "button")
+        element_button.click()
