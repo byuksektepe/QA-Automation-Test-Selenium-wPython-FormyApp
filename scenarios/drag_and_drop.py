@@ -10,9 +10,10 @@ class drag_and_drop_scenario:
     def start(self, driver):
         actions = ActionChains(driver)
 
-        drag = WebDriverWait(driver, 20).until(
+        drag = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.ID, "image")))
-        drop = WebDriverWait(driver, 20).until(
+        drop = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.ID, "box")))
+
         actions.drag_and_drop(drag, drop).perform()
 
