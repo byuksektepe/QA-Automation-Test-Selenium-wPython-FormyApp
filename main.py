@@ -5,6 +5,7 @@ from scenarios.autocomplete import autocomplete_scenario
 from scenarios.scroll_to_element import scroll_to_element_scenario
 from scenarios.switch_to_window import switch_to_window_scenario
 from scenarios.switch_to_alert import switch_to_alert_scenario
+from scenarios.execute_javascript import execute_javascript_scenario
 import sys
 sub = sub()
 
@@ -50,5 +51,11 @@ switch_to_window_scenario.start(main.chrome_driver)
 #Stay same page
 switch_to_alert_scenario = switch_to_alert_scenario()
 switch_to_alert_scenario.start(main.chrome_driver)
+
+sub.click_element(find_element_mode="ID", item="navbarDropdownMenuLink", page_load_wait_id="null", driver=main.chrome_driver, require_wait=0)
+sub.click_element(find_element_mode="LINK_TEXT", item="Modal", page_load_wait_id="modal-button", driver=main.chrome_driver)
+
+execute_javascript_scenario = execute_javascript_scenario()
+execute_javascript_scenario.start(main.chrome_driver)
 # Call This lAST!
 sub.sleep_and_quit(2, main.chrome_driver)
