@@ -37,7 +37,7 @@ class main:
         elif find_element_mode == "CLASS_NAME":
             click_element = main.chrome_driver.find_element(By.CLASS_NAME, item)
         else:
-            raise Exception("in click_element function, find_element_mode does not math.")
+            raise Exception("in click_element function, find_element_mode does not match.")
             s = 0
 
         if s == 1:
