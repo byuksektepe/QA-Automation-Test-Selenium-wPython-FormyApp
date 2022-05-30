@@ -20,6 +20,8 @@ class sub:
             click_element = driver.find_element(By.NAME, item)
         elif find_element_mode == "CLASS_NAME":
             click_element = driver.find_element(By.CLASS_NAME, item)
+        elif find_element_mode == "LINK_TEXT":
+            click_element = driver.find_element(By.LINK_TEXT, item)
         else:
             raise Exception("in click_element function, find_element_mode does not match.")
             s = 0
@@ -33,4 +35,4 @@ class sub:
             except TimeoutException:
                 print("Timed out waiting for page to load")
             finally:
-                print("Page loaded")
+                print("Page/item loaded %s" % item)
