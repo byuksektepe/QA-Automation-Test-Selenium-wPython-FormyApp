@@ -11,10 +11,9 @@ sub = sub()
 
 class main:
     chrome_driver = chrome_driver().set()
-    chrome_driver.get('https://formy-project.herokuapp.com/')
 
     def Get_Formy_App():
-
+        main.chrome_driver.get('https://formy-project.herokuapp.com/')
         main.chrome_driver.maximize_window()
 
         if not "Formy" in main.chrome_driver.title:
