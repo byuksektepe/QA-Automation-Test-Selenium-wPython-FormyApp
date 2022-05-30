@@ -24,7 +24,7 @@ class main:
 main.Get_Formy_App()
 sub.click_element(find_element_mode="XPATH", item="/html/body/div/div/li[9]/a", page_load_wait_id="name", driver=main.chrome_driver)
 
-# Start scenarios in order
+# Start scenarios in order ----->
 keyboard_mouse_input_scenario = keyboard_mouse_input_scenario()
 keyboard_mouse_input_scenario.start(main.chrome_driver)
 
@@ -57,5 +57,7 @@ sub.click_element(find_element_mode="LINK_TEXT", item="Modal", page_load_wait_id
 
 execute_javascript_scenario = execute_javascript_scenario()
 execute_javascript_scenario.start(main.chrome_driver)
+
+# End Scenarios <-----
 # Call This lAST!
 sub.sleep_and_quit(2, main.chrome_driver)
