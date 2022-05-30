@@ -3,8 +3,11 @@ import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support import expected_conditions as EC
 import sys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -42,10 +45,21 @@ class main:
 
         if s == 1:
             click_element.click()
+            timeout = 5
+            try:
+                element_present = EC.presence_of_element_located((By.ID, 'name'))
+                WebDriverWait(main.chrome_driver, timeout).until(element_present)
+            except TimeoutException:
+                print("Timed out waiting for page to load")
+            finally:
+                print("Page loaded")
 
 
 main.Get_Formy_App()
 main.click_element(find_element_mode="XPATH", item="/html/body/div/div/li[9]/a")
+input_tag = main.chrome_driver.find_element(By.ID, "name")
+input_tag.click()
+input_tag.send_keys("Berkant")
 
 # Call This lAST!
 main.sleep_and_quit()
