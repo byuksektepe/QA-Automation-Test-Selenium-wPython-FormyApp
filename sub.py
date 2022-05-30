@@ -10,7 +10,7 @@ class sub:
         time.sleep(ts)
         driver.quit()
 
-    def click_element(self, find_element_mode, item, page_load_wait_id, driver):
+    def click_element(self, find_element_mode, item, page_load_wait_id, driver, require_wait = 1):
         s = 1
         if find_element_mode == "XPATH":
             click_element = driver.find_element(By.XPATH, item)
@@ -29,10 +29,11 @@ class sub:
         if s == 1:
             click_element.click()
             timeout = 5
-            try:
-                element_present = EC.presence_of_element_located((By.ID, page_load_wait_id))
-                WebDriverWait(driver, timeout).until(element_present)
-            except TimeoutException:
-                print("Timed out waiting for page to load")
-            finally:
-                print("Page/item loaded %s" % item)
+            if require_wait == 1:
+                try:
+                    element_present = EC.presence_of_element_located((By.ID, page_load_wait_id))
+                    WebDriverWait(driver, timeout).until(element_present)
+                except TimeoutException:
+                    print("Timed out waiting for page to load")
+                finally:
+                    print("Page/item loaded %s" % item)

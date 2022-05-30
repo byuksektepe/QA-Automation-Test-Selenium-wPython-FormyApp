@@ -24,10 +24,13 @@ sub.click_element(find_element_mode="XPATH", item="/html/body/div/div/li[9]/a", 
 # Start scenarios in order
 keyboard_mouse_input_scenario.start(main.chrome_driver)
 # Click Dropdown Menu then click autocomplete link
-sub.click_element(find_element_mode="ID", item="navbarDropdownMenuLink", page_load_wait_id="name", driver=main.chrome_driver)
+sub.click_element(find_element_mode="ID", item="navbarDropdownMenuLink", page_load_wait_id="name", driver=main.chrome_driver, require_wait=0)
 sub.click_element(find_element_mode="LINK_TEXT", item="Autocomplete", page_load_wait_id="autocomplete", driver=main.chrome_driver)
 # Start Autocomplete scenario
 autocomplete_scenario.start(main.chrome_driver)
+
+sub.click_element(find_element_mode="ID", item="navbarDropdownMenuLink", page_load_wait_id="name", driver=main.chrome_driver, require_wait=0)
+sub.click_element(find_element_mode="LINK_TEXT", item="Page Scroll", page_load_wait_id="date", driver=main.chrome_driver)
 
 # Call This lAST!
 sub.sleep_and_quit(2, main.chrome_driver)
