@@ -2,7 +2,7 @@
  <p>A test Automation Project for FormyApp </p>
  <p>Includes seven scenarios:</p>
  <ul>
-  <li>Keyboard Mouse Input Test</li>
+  <li>Keyboard&Mouse Input Test</li>
   <li>Autocomplete Test</li>
   <li>Scroll to Element Test</li>
   <li>Switch to window Test</li>
