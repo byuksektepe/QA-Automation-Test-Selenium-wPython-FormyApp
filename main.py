@@ -19,7 +19,7 @@ class main:
         main.chrome_driver.maximize_window()
 
         if not "Formy" in main.chrome_driver.title:
-            raise Exception("Could not load page")
+            raise Exception("Page Could Not Load, Check Title Text")
 
 
     def sleep_and_quit():
