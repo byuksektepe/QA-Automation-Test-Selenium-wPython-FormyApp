@@ -1,4 +1,4 @@
-﻿# QA-Automation-Test-Selenium-wPython-FormyApp
+﻿# QA Automation Test - Selenium With Python - FormyApp
  <p>A test Automation Project for FormyApp </p>
  <p>Includes seven scenarios:</p>
  <ul>
