@@ -28,7 +28,7 @@ keyboard_mouse_input_scenario = keyboard_mouse_input_scenario()
 keyboard_mouse_input_scenario.start(main.chrome_driver)
 
 # Click Dropdown Menu then click autocomplete link
-# instead, the url can be redirected directly with driver.get()
+# instead, the url can be redirected directly with driver.get(), I used click to test the menus
 sub.click_element(find_element_mode="ID", item="navbarDropdownMenuLink", page_load_wait_id="null", driver=main.chrome_driver, require_wait=0)
 sub.click_element(find_element_mode="LINK_TEXT", item="Autocomplete", page_load_wait_id="autocomplete", driver=main.chrome_driver)
 # Start Autocomplete scenario
