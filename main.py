@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -9,14 +11,14 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 class main:
-    def Open_Formy_App():
+    def Get_Formy_App():
         chrome_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        chrome_driver.get('https://www.google.com')
+        chrome_driver.get('https://formy-project.herokuapp.com/')
         chrome_driver.maximize_window()
-        if not "Google" in chrome_driver.title:
+        if not "Formy" in chrome_driver.title:
             raise Exception("Could not load page")
-
+        time.sleep(3)
         chrome_driver.quit()
 
 
-main.Open_Formy_App()
+main.Get_Formy_App()
