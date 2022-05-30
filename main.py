@@ -14,9 +14,12 @@ class main:
     def Get_Formy_App():
         chrome_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         chrome_driver.get('https://formy-project.herokuapp.com/')
+
         chrome_driver.maximize_window()
+
         if not "Formy" in chrome_driver.title:
             raise Exception("Could not load page")
+
         time.sleep(3)
         chrome_driver.quit()
 
