@@ -6,6 +6,7 @@ from scenarios.scroll_to_element import scroll_to_element_scenario
 from scenarios.switch_to_window import switch_to_window_scenario
 from scenarios.switch_to_alert import switch_to_alert_scenario
 from scenarios.execute_javascript import execute_javascript_scenario
+from scenarios.drag_and_drop import drag_and_drop_scenario
 import sys
 sub = sub()
 
@@ -56,6 +57,12 @@ sub.click_element(find_element_mode="LINK_TEXT", item="Modal", page_load_wait_id
 
 execute_javascript_scenario = execute_javascript_scenario()
 execute_javascript_scenario.start(main.chrome_driver)
+
+#get used due to a drag and drop bug
+main.chrome_driver.get("https://formy-project.herokuapp.com/dragdrop")
+
+drag_and_drop_scenario = drag_and_drop_scenario()
+drag_and_drop_scenario.start(main.chrome_driver)
 
 # End Scenarios <-----
 # Call This lAST!
