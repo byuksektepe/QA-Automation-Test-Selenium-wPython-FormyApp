@@ -4,6 +4,7 @@ from scenarios.keyboard_mouse_input import keyboard_mouse_input_scenario
 from scenarios.autocomplete import autocomplete_scenario
 from scenarios.scroll_to_element import scroll_to_element_scenario
 from scenarios.switch_to_window import switch_to_window_scenario
+from scenarios.switch_to_alert import switch_to_alert_scenario
 import sys
 sub = sub()
 
@@ -46,5 +47,8 @@ sub.click_element(find_element_mode="LINK_TEXT", item="Switch Window", page_load
 
 switch_to_window_scenario = switch_to_window_scenario()
 switch_to_window_scenario.start(main.chrome_driver)
+#Stay same page
+switch_to_alert_scenario = switch_to_alert_scenario()
+switch_to_alert_scenario.start(main.chrome_driver)
 # Call This lAST!
 sub.sleep_and_quit(2, main.chrome_driver)
