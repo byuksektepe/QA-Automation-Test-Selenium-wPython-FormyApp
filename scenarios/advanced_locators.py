@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 
 # There is the define area for advenced locators
 class advanced_locators_scenario:
-    def start(self, driver):
+
+    @staticmethod
+    def start(driver):
         # CSS Selector Examples ----->
         # <input class="q" type="text"/>
         element = driver.find_element(By.CSS_SELECTOR, "input.q")
