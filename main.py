@@ -16,6 +16,8 @@ from common_components.file_upload import file_upload
 
 from synchronization.implicit_waits import implicit_waits
 from synchronization.explicit_waits import explicit_waits
+
+from colorama import Fore, Style
 import sys
 sub = sub()
 
@@ -27,6 +29,8 @@ class main:
     def Get_Formy_App():
         main.chrome_driver.get('https://formy-project.herokuapp.com/')
         main.chrome_driver.maximize_window()
+
+        print(f"{Fore.YELLOW}[INFO]{Style.RESET_ALL} Execute Just Full Form Test Status: %s" % just_full_form_test)
 
         if not "Formy" in main.chrome_driver.title:
             raise Exception("Page Could Not Load, Check Title Text")
