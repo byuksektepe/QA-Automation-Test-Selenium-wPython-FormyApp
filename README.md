@@ -30,7 +30,7 @@
   <li>Explicit Waits Test</li>
  </ul>
  
- ### Result [06/01/2022]
+ ### Test Result [06/01/2022]
  ![TestResult](https://user-images.githubusercontent.com/61010367/171288466-ff831eb5-a1de-4c24-9e32-ff8a3e3fd880.png)
 
 
