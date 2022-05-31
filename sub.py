@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 
+from colorama import Fore, Style
+
 class sub:
     def sleep_and_quit(self, t, driver):
         ts = int(t)
@@ -36,6 +38,6 @@ class sub:
                     element_present = EC.presence_of_element_located((By.ID, page_load_wait_id))
                     WebDriverWait(driver, timeout).until(element_present)
                 except TimeoutException:
-                    print("Timed out waiting for page to load")
+                    raise Exception("Timed out waiting for page to load, Test Failed")
                 finally:
-                    print("['PASS']Page/item loaded %s" % item)
+                    print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Page/item loaded %s" % item)

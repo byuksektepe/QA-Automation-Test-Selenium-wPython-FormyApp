@@ -7,7 +7,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 
 # This is for colored console messages
-from colorama import init, Fore, Style
+from colorama import Fore, Style
 
 class full_form:
     def start(self, driver):
