@@ -15,8 +15,8 @@ class explicit_waits:
         el.send_keys("Çengelköy, Vahdettin Köșkü, Şehitler Yolu Sokak, Üsküdar/İstanbul")
 
         try:
-            element_present = EC.visibility_of_element_located((By.CLASS_NAME, "dismissButton"))
-            WebDriverWait(driver, 5).until(element_present)
+            element_visible = EC.visibility_of_element_located((By.CLASS_NAME, "dismissButton"))
+            WebDriverWait(driver, 5).until(element_visible)
         except TimeoutException:
             print("Timed out waiting for item load")
         finally:
