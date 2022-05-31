@@ -7,6 +7,8 @@ from scenarios.switch_to_window import switch_to_window_scenario
 from scenarios.switch_to_alert import switch_to_alert_scenario
 from scenarios.execute_javascript import execute_javascript_scenario
 from scenarios.drag_and_drop import drag_and_drop_scenario
+
+from common_components.radio_buttons_and_checkboxes import radio_buttons_and_checkboxes
 import sys
 sub = sub()
 
@@ -60,9 +62,12 @@ execute_javascript_scenario.start(main.chrome_driver)
 
 #get used due to a drag and drop bug
 main.chrome_driver.get("https://formy-project.herokuapp.com/dragdrop")
-
 drag_and_drop_scenario = drag_and_drop_scenario()
 drag_and_drop_scenario.start(main.chrome_driver)
+
+#common_compoments
+radio_buttons_and_checkboxes = radio_buttons_and_checkboxes()
+radio_buttons_and_checkboxes.start(main.chrome_driver)
 
 # End Scenarios <-----
 # Call This lAST!
