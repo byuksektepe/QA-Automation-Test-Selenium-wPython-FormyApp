@@ -9,8 +9,6 @@ from selenium.webdriver.support import expected_conditions as EC
 # This is for colored console messages
 from colorama import init, Fore, Style
 
-init()
-
 class full_form:
     def start(self, driver):
         actions = ActionChains(driver)
