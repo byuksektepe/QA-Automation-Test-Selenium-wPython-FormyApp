@@ -14,6 +14,11 @@
   <li>Execute JavaScript Test</li>
   <li>Item drag and drop Test</li>
  </ul>
+
+ <p>Common Components:</p>
+ <ul>
+  <li>Radio Buttons and Check Boxes Test</li>
+ </ul>
  
  ### Result[05/31/2022]
  ![TestResult](https://user-images.githubusercontent.com/61010367/171069989-bed8e741-3b54-423a-9dc9-813027bfc6db.png)
