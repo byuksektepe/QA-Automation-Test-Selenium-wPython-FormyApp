@@ -9,6 +9,7 @@ from scenarios.execute_javascript import execute_javascript_scenario
 from scenarios.drag_and_drop import drag_and_drop_scenario
 
 from common_components.radio_buttons_and_checkboxes import radio_buttons_and_checkboxes
+from common_components.datepickers import datepickers
 import sys
 sub = sub()
 
@@ -68,6 +69,9 @@ drag_and_drop_scenario.start(main.chrome_driver)
 #common_compoments
 radio_buttons_and_checkboxes = radio_buttons_and_checkboxes()
 radio_buttons_and_checkboxes.start(main.chrome_driver)
+
+datepickers = datepickers()
+datepickers.start(main.chrome_driver)
 
 # End Scenarios <-----
 # Call This lAST!
