@@ -18,6 +18,8 @@
  <p>Common Components from <a href="https://github.com/Berkantyuks/QA-Automation-Test-Selenium-wPython-FormyApp/tree/main/common_components">common_components</a>:</p>
  <ul>
   <li>Radio Buttons and Check Boxes Test</li>
+  <li>Date Pickers Test</li>
+  <li>Dropdown Menu Test</li>
  </ul>
  
  ### Result[05/31/2022]
