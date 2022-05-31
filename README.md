@@ -20,6 +20,7 @@
   <li>Radio Buttons and Check Boxes Test</li>
   <li>Date Pickers Test</li>
   <li>Dropdown Menu Test</li>
+  <li>File Upload Test</li>
  </ul>
  
  ### Result[05/31/2022]
