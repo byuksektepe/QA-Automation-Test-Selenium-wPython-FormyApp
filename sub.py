@@ -36,4 +36,4 @@ class sub:
                 except TimeoutException:
                     print("Timed out waiting for page to load")
                 finally:
-                    print("Page/item loaded %s" % item)
+                    print("['PASS']Page/item loaded %s" % item)
