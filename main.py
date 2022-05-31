@@ -21,7 +21,7 @@ from colorama import Fore, Style
 import sys
 sub = sub()
 
-just_full_form_test = 1
+just_full_form_test = 0
 
 class main:
     chrome_driver = chrome_driver().set()
