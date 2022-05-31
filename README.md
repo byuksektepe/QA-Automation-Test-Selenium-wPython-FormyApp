@@ -4,7 +4,7 @@
  ![Selenium](https://img.shields.io/badge/Selenium-000000?style=for-the-badge&logo=Selenium&logoColor=white)
  ![ChromeDriver](https://img.shields.io/badge/Google_chrome-000000?style=for-the-badge&logo=Google-chrome&logoColor=white)
  <p>A test Automation Project for FormyApp </p>
- <p>Includes seven Scenarios from <a href="https://github.com/Berkantyuks/QA-Automation-Test-Selenium-wPython-FormyApp/tree/main/scenarios">scenarios</a>:</p>
+ <p>Includes eight Scenarios from <a href="https://github.com/Berkantyuks/QA-Automation-Test-Selenium-wPython-FormyApp/tree/main/scenarios">scenarios</a>:</p>
  <ul>
   <li>Keyboard&Mouse Input Test</li>
   <li>Autocomplete Test</li>
@@ -13,6 +13,7 @@
   <li>Switch to Alert Test</li>
   <li>Execute JavaScript Test</li>
   <li>Item drag and drop Test</li>
+  <li>Full Form Test</li>
  </ul>
 
  <p>Common Components from <a href="https://github.com/Berkantyuks/QA-Automation-Test-Selenium-wPython-FormyApp/tree/main/common_components">common_components</a>:</p>
