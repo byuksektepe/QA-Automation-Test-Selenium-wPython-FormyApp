@@ -14,6 +14,7 @@ from common_components.dropdown import dropdown
 from common_components.file_upload import file_upload
 
 from synchronization.implicit_waits import implicit_waits
+from synchronization.explicit_waits import explicit_waits
 import sys
 sub = sub()
 
@@ -64,16 +65,15 @@ execute_javascript_scenario = execute_javascript_scenario().start(main.chrome_dr
 main.chrome_driver.get("https://formy-project.herokuapp.com/dragdrop")
 drag_and_drop_scenario = drag_and_drop_scenario().start(main.chrome_driver)
 
-#common_compoments
+#common_compoments tests
 radio_buttons_and_checkboxes = radio_buttons_and_checkboxes().start(main.chrome_driver)
-
 datepickers = datepickers().start(main.chrome_driver)
-
 dropdown = dropdown().start(main.chrome_driver)
-
 file_upload = file_upload().start(main.chrome_driver)
 
+# synchronization tests
 implicit_waits = implicit_waits().start(main.chrome_driver)
+explicit_waits = explicit_waits().start(main.chrome_driver)
 
 
 # End Scenarios <-----
