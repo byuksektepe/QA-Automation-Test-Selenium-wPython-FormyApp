@@ -6,6 +6,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 
+# This is for colored console messages
+from colorama import init, Fore, Style
+
+init()
+
 class full_form:
     def start(self, driver):
         actions = ActionChains(driver)
@@ -41,10 +46,12 @@ class full_form:
         try:
             element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".alert.alert-success"))
             WebDriverWait(driver, 5).until(element_visible)
+
         except TimeoutException:
-            print("Timed out waiting for form submit page load")
+            raise Exception("Timed out waiting for form submit page load")
+
         finally:
-            print("[PASS] Form Submitted Successfully")
+            print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Form Submitted Successfully")
 
         # Bu kadar
 
