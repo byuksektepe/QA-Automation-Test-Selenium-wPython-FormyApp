@@ -11,6 +11,7 @@ from scenarios.drag_and_drop import drag_and_drop_scenario
 from common_components.radio_buttons_and_checkboxes import radio_buttons_and_checkboxes
 from common_components.datepickers import datepickers
 from common_components.dropdown import dropdown
+from common_components.file_upload import file_upload
 import sys
 sub = sub()
 
@@ -67,6 +68,8 @@ radio_buttons_and_checkboxes = radio_buttons_and_checkboxes().start(main.chrome_
 datepickers = datepickers().start(main.chrome_driver)
 
 dropdown = dropdown().start(main.chrome_driver)
+
+file_upload = file_upload().start(main.chrome_driver)
 
 
 # End Scenarios <-----
