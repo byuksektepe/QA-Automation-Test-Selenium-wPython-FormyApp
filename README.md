@@ -30,7 +30,12 @@
   <li>Explicit Waits Test</li>
  </ul>
  
- ### Test Result [06/01/2022]
- ![TestResult](https://user-images.githubusercontent.com/61010367/171288466-ff831eb5-a1de-4c24-9e32-ff8a3e3fd880.png)
+ ### Passed Test Result [06/01/2022]
+ ![TestResultPass](https://user-images.githubusercontent.com/61010367/171296044-9cff252b-ffea-4fcd-b62a-44bac117bcbd.png)
+ 
+ ### Failed Test Result [06/01/2022]
+ ![TestResultFail](https://user-images.githubusercontent.com/61010367/171296365-7e4d4b94-dfd3-444e-bf48-43980b500430.png)
+
+
 
 
