@@ -22,6 +22,12 @@
   <li>Dropdown Menu Test</li>
   <li>File Upload Test</li>
  </ul>
+
+ <p>Synchronization Units from <a href="https://github.com/Berkantyuks/QA-Automation-Test-Selenium-wPython-FormyApp/tree/main/synchronization">synchronization</a>:</p>
+ <ul>
+  <li>Implicit Waits Test</li>
+  <li>Explicit Waits Test</li>
+ </ul>
  
  ### Result[05/31/2022]
  ![TestResult](https://user-images.githubusercontent.com/61010367/171069989-bed8e741-3b54-423a-9dc9-813027bfc6db.png)
