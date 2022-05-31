@@ -1,8 +1,9 @@
-import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
+
+from colorama import Fore, Style
 
 # Wait for a specified amount of time for a certain condition to be true
 # Waits for dynamically located elements, gives better options and intelligent than implicit wait
@@ -18,9 +19,9 @@ class explicit_waits:
             element_visible = EC.visibility_of_element_located((By.CLASS_NAME, "dismissButton"))
             WebDriverWait(driver, 5).until(element_visible)
         except TimeoutException:
-            print("Timed out waiting for item load")
+            raise Exception("Timed out waiting for item load, Test Failed")
         finally:
-            print("explicit wait works")
+            print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Explicit Waits Working")
 
         el = driver.find_element(By.CLASS_NAME, "dismissButton")
         el.click()
