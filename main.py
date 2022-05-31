@@ -19,7 +19,7 @@ from synchronization.explicit_waits import explicit_waits
 import sys
 sub = sub()
 
-just_full_form_test = 0
+just_full_form_test = 1
 
 class main:
     chrome_driver = chrome_driver().set()

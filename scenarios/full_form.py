@@ -6,6 +6,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 
+from unittest import TestCase
+unittest = TestCase()
+
 # This is for colored console messages
 from colorama import Fore, Style
 
@@ -42,13 +45,18 @@ class full_form:
 
         # Formun başarıyla yollandığını doğrula
         try:
-            element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".alert.alert-success"))
-            WebDriverWait(driver, 5).until(element_visible)
+            alert_element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".alert.alert-success"))
+            WebDriverWait(driver, 5).until(alert_element_visible)
 
         except TimeoutException:
             raise Exception("Timed out waiting for form submit page load")
 
         finally:
+            get_alert = driver.find_element(By.CSS_SELECTOR, ".alert.alert-success")
+            alert_text = get_alert.text
+
+            unittest.assertEqual("The form was successfully submitted!", alert_text)
+
             print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Form Submitted Successfully")
 
         # Bu kadar
