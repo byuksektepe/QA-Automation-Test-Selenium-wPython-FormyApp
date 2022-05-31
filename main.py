@@ -81,7 +81,9 @@ if just_full_form_test == 0:
     explicit_waits = explicit_waits().start(main.chrome_driver)
 
 # and final... Full Form Test
+    full_form = full_form().start(main.chrome_driver)
 else:
+    # if you choose just_full_form_test = 1, just full form test executes
     full_form = full_form().start(main.chrome_driver)
 
 
