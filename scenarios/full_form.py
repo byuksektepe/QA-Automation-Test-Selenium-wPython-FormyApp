@@ -54,7 +54,6 @@ class full_form:
         finally:
             get_alert = driver.find_element(By.CSS_SELECTOR, ".alert.alert-success")
             alert_text = get_alert.text
-
             unittest.assertEqual("The form was successfully submitted!", alert_text)
 
             print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Form Submitted Successfully")
