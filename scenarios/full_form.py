@@ -14,7 +14,11 @@ class full_form:
             driver.find_element(By.ID, ID_FIELD[0]).send_keys(ID_FIELD[1])
 
         driver.execute_script("window.scrollBy(0,250);")
-        driver.find_element(By.CSS_SELECTOR,"input[value='radio-button-2']").click()
+        driver.find_element(By.CSS_SELECTOR, "input[value='radio-button-2']").click()
+        driver.find_element(By.CSS_SELECTOR, "input[value='checkbox-1']").click()
+
+        driver.find_element(By.CSS_SELECTOR, "option[value='2']").click()
+        driver.find_element(By.ID, "datepicker").send_keys("06/01/2022")
 
 
 
