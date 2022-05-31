@@ -12,6 +12,8 @@ from common_components.radio_buttons_and_checkboxes import radio_buttons_and_che
 from common_components.datepickers import datepickers
 from common_components.dropdown import dropdown
 from common_components.file_upload import file_upload
+
+from synchronization.implicit_waits import implicit_waits
 import sys
 sub = sub()
 
@@ -70,6 +72,8 @@ datepickers = datepickers().start(main.chrome_driver)
 dropdown = dropdown().start(main.chrome_driver)
 
 file_upload = file_upload().start(main.chrome_driver)
+
+implicit_waits = implicit_waits().start(main.chrome_driver)
 
 
 # End Scenarios <-----
