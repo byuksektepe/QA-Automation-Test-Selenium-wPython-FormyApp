@@ -6,7 +6,8 @@ class autocomplete_scenario:
 
         el = driver.find_element(By.ID, "autocomplete")
         el.send_keys("Çengelköy, Vahdettin Köșkü, Şehitler Yolu Sokak, Üsküdar/İstanbul")
-        time.sleep(1)
+        # time.sleep(1) use implicitly wait instead of time.sleep
+        driver.implicitly_wait(5)
 
         el = driver.find_element(By.CLASS_NAME, "dismissButton")
         el.click()
