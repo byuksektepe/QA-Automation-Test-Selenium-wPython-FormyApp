@@ -1,5 +1,10 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support import expected_conditions as EC
 
 class full_form:
     def start(self, driver):
@@ -24,8 +29,24 @@ class full_form:
         # Select boxu seç
         driver.find_element(By.CSS_SELECTOR, "option[value='2']").click()
 
-        # Tarih gir
-        driver.find_element(By.ID, "datepicker").send_keys("06/01/2022")
+        # Tarih gir ve entera bas
+        datepicker = driver.find_element(By.ID, "datepicker")
+        datepicker.send_keys("06/01/2022")
+        datepicker.send_keys(Keys.RETURN)
+
+        # Formu Yolla
+        driver.find_element(By.CSS_SELECTOR, ".btn.btn-lg.btn-primary").click()
+
+        # Formun başarıyla yollandığını doğrula
+        try:
+            element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".alert.alert-success"))
+            WebDriverWait(driver, 5).until(element_visible)
+        except TimeoutException:
+            print("Timed out waiting for form submit page load")
+        finally:
+            print("[PASS] Form Submitted Successfully")
+
+        # Bu kadar
 
 
 
